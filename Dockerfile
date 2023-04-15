@@ -10,7 +10,7 @@ WORKDIR "/src/."
 RUN dotnet build "test-railway-deploy.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "test-railway-deploy.csproj" --no-restore -c Release -o /app/publish /p:UseAppHost=true
+RUN dotnet publish "test-railway-deploy.csproj" --no-restore -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
