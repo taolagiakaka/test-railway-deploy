@@ -7,7 +7,7 @@ var port = builder.Configuration["PORT"];
 
 //set listening urls
 // builder.WebHost.UseUrls($"http://*:{port};http://localhost:3000");
-builder.WebHost.UseUrls($"http://0.0.0.0:{port};http://localhost:3000");
+// builder.WebHost.UseUrls($"http://0.0.0.0:{port};http://localhost:3000");
 //build application
 builder.Services.AddSingleton<IMongoCollection<Person>>(s =>
 {
